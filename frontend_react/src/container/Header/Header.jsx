@@ -20,9 +20,22 @@ const Header = () => {
               <h1 className='head-text'>Claudette</h1>
             </div>
           </div>
+
+          <div className='tag-cmp app__flex'>
+            <p className='p-text'>FullStack Web Developer</p>
+          </div>
         </div>
+      </motion.div>
+
+      <motion.div>
 
       </motion.div>
+
+      <motion.div>
+        
+      </motion.div>
+
+
     </div>
   )
 }
