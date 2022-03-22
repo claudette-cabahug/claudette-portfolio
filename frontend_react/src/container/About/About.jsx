@@ -6,21 +6,15 @@ import { images } from '../../constants'
 import './About.scss'
 
 const abouts = [
-  { title: 'Fullstack', description: 'I am a good web developer.', imgUrl: images.about01 },
-  { title: 'Frontend', description: 'I am a good web developer.', imgUrl: images.about02 },
-  { title: 'Backend', description: 'I am a good web developer.', imgUrl: images.about03 },
+  { title: 'Fullstack Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
+  { title: 'Frontend Development', description: 'I am a good web developer.', imgUrl: images.about02 },
+  { title: 'Backend Development', description: 'I am a good web developer.', imgUrl: images.about03 },
 ]
 
 const About = () => {
   return (
     <>
-      <h2 className='head-text'>
-        I Know that
-        <span>Good Design</span>
-        <br />
-        means
-        <span>Good Business</span>
-      </h2>
+      <h2 className='head-text'>I Know that <span>Good Development</span> <br /> means <span>Good Business</span></h2>
 
       <div className='app__profiles'>
         {abouts.map((about, index) => (
