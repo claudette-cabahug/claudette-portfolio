@@ -4,14 +4,25 @@ import { motion } from 'framer-motion'
 import { images } from '../../constants'
 
 import './About.scss'
+import { urlFor, client } from '../../client'
 
-const abouts = [
-  { title: 'Fullstack Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
-  { title: 'Frontend Development', description: 'I am a good web developer.', imgUrl: images.about02 },
-  { title: 'Backend Development', description: 'I am a good web developer.', imgUrl: images.about03 },
-]
+// const abouts = [
+//   { title: 'Fullstack Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
+//   { title: 'Frontend Development', description: 'I am a good web developer.', imgUrl: images.about02 },
+//   { title: 'Backend Development', description: 'I am a good web developer.', imgUrl: images.about03 },
+// ]
 
 const About = () => {
+  const [abouts, setAbouts] = useState([])
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]'
+
+    client.fetch(query)
+      .then((data) => setAbouts(data))
+  }, [])
+  
+
   return (
     <>
       <h2 className='head-text'>I Know that <span>Good Development</span> <br /> means <span>Good Business</span></h2>
